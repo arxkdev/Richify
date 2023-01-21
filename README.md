@@ -104,5 +104,6 @@ local Foo = Richify.LessThan .. "world" .. Richify.GreaterThan;
 local Str = `Hello {Foo}!`;
 print(Str);
 -- Result: Hello <world>!
+```
 
-Done.
+This is based off of a RichText helper already made, just redone to make it far less complex and got rid of bloated code.
