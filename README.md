@@ -31,6 +31,10 @@ local Text = "You have " .. Richify(GEMS, GemOpts);
 RichifyExampleLabel.Text = Richify(Text, TextOps);
 ```
 
+## Result of Example
+![alt text](https://i.imgur.com/68HuGrk.png)
+
+
 ## Usage
 Works pretty simple. All you need to do is check (https://create.roblox.com/docs/building-and-visuals/ui/rich-text) for TAGS and ATTRIBUTES. Find the ones you want & include in the richify options.
 
