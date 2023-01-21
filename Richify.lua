@@ -1,6 +1,6 @@
-local Rich = { };
+local Richify = { };
 
-Rich.ElementTags = {
+Richify.ElementTags = {
 	["Font"] = "font",
 	["Stroke"] = "stroke",
 	["Bold"] = "b",
@@ -10,7 +10,7 @@ Rich.ElementTags = {
 	["Uppercase"] = "uc",
 	["SmallCaps"] = "sc"
 };
-Rich.AttributeTags = {
+Richify.AttributeTags = {
 	["Color"] = "color",
 	["Size"] = "size",
 	["Face"] = "face",
@@ -21,7 +21,7 @@ Rich.AttributeTags = {
 	["Thickness"] = "thickness"
 };
 
-function Rich:__call(str, options)
+function Richify:__call(str, options)
 	local Final = str;
 	Final = tostring(Final);
 
@@ -64,12 +64,12 @@ function Rich:__call(str, options)
 	return tostring(Final);
 end
 
-Rich.LineBreak = '<br />';
-Rich.LessThan = '&lt;';
-Rich.GreaterThan = '&gt;';
-Rich.Quote = '&quot;';
-Rich.Apostrophe = '&apos;';
-Rich.Ampersand = '&amp;';
+Richify.LineBreak = '<br />';
+Richify.LessThan = '&lt;';
+Richify.GreaterThan = '&gt;';
+Richify.Quote = '&quot;';
+Richify.Apostrophe = '&apos;';
+Richify.Ampersand = '&amp;';
 
-setmetatable(Rich, {__call = Rich.__call});
-return Rich;
+setmetatable(Richify, {__call = Richify.__call});
+return Richify;

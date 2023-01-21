@@ -1,4 +1,4 @@
-local Richify = require(game:GetService("ReplicatedStorage").Rich);
+local Richify = require(game:GetService("ReplicatedStorage").Richify);
 
 -- Constants
 local GEMS = "1,000 Gems!";
