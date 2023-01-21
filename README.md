@@ -87,4 +87,22 @@ Available Attributes:
 }
 ```
 
+# Helper Variables
+There are helper variables available to sub in your strings to prevent RichText from getting confused:
+```
+Richify.LineBreak
+Richify.LessThan
+Richify.GreaterThan
+Richify.Quote
+Richify.Apostrophe
+Richify.Ampersand
+```
+
+For example, if you want to use `'Hello <world>!'` you can use this:
+```lua
+local Foo = Richify.LessThan .. "world" .. Richify.GreaterThan;
+local Str = `Hello {Foo}!`;
+print(Str);
+-- Result: Hello <world>!
+
 Done.
