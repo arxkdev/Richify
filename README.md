@@ -100,9 +100,9 @@ Richify.Ampersand
 
 For example, if you want to use `'Hello <world>!'` you can use this:
 ```lua
-local Foo = Richify.LessThan .. "world" .. Richify.GreaterThan;
-local Str = `Hello {Foo}!`;
-print(Str);
+local foo = Richify.LessThan .. "world" .. Richify.GreaterThan;
+local bar = `Hello {foo}!`;
+print(bar);
 -- Result: Hello <world>!
 ```
 
