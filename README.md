@@ -18,10 +18,11 @@ local GemOpts = {
 		Transparency = 0.25,
 		Color = Color3.fromRGB(0, 162, 255)
 	},
-	
+
 	Font = {Color = Color3.fromRGB(255, 255, 255)},
 	Bold = true,
-};
+}
+
 local TextOps = {
 	Font = {Color = Color3.fromRGB(255, 255, 255)},
 }
@@ -45,10 +46,10 @@ local Options = {
 		Transparency = 0.25,
 		Color = Color3.fromRGB(0, 162, 255)
 	},
-	
+
 	Font = {Color = Color3.fromRGB(255, 255, 255)},
 	Bold = true,
-};
+}
 ```
 
 Set the options to the Richify function (make sure to keep elements/tags first in the options and attributes, nested)
