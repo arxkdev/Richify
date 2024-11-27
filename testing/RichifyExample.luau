@@ -11,7 +11,7 @@ local GemOpts = {
 		Transparency = 0.25,
 		Color = Color3.fromRGB(0, 162, 255)
 	},
-	
+
 	Font = {Color = Color3.fromRGB(255, 255, 255)},
 	Bold = true,
 };

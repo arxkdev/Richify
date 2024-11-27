@@ -1,4 +1,4 @@
-local Richify = { };
+local Richify = {};
 
 Richify.ElementTags = {
 	["Font"] = "font",
@@ -9,7 +9,8 @@ Richify.ElementTags = {
 	["Strikethrough"] = "s",
 	["Uppercase"] = "uc",
 	["SmallCaps"] = "sc"
-};
+}
+
 Richify.AttributeTags = {
 	["Color"] = "color",
 	["Size"] = "size",
@@ -19,33 +20,34 @@ Richify.AttributeTags = {
 	["Transparency"] = "transparency",
 	["Joins"] = "joins",
 	["Thickness"] = "thickness"
-};
+}
 
-function Richify:__call(str, options)
+function Richify:__call(str: string, options: {[string]: any}?)
+	options = options or {};
+
 	local Final = str;
 	Final = tostring(Final);
 
 	for ElementName, ElementValue in pairs(options) do
 		local Tag = self.ElementTags[ElementName];
-		if (Tag == nil) then 
+		if (Tag == nil) then
 			continue;
 		end;
 
 		local OpeningTag = Tag;
-		
+
 		if (type(ElementValue) == "table") then
-			if (next(ElementValue) == nil) then 
+			if (next(ElementValue) == nil) then
 				continue;
 			end;
 
 			for AttributeName, AttributeValue in pairs(ElementValue) do
 				local AttributeTag = self.AttributeTags[AttributeName];
-				if (AttributeTag == nil) then 
+				if (AttributeTag == nil) then
 					continue;
 				end;
 
 				local AttributeValueString = "";
-				
 				if (typeof(AttributeValue) == "Color3") then
 					AttributeValueString = 'rgb(' .. tostring(math.round(AttributeValue.R * 255)) .. ',' .. tostring(math.round(AttributeValue.G * 255)) .. ',' .. tostring(math.round(AttributeValue.B * 255)) .. ')';
 				else
@@ -60,7 +62,7 @@ function Richify:__call(str, options)
 
 		Final = "<" .. OpeningTag .. ">" .. Final .. "</".. Tag ..">";
 	end;
-	
+
 	return tostring(Final);
 end
 

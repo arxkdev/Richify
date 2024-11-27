@@ -1,0 +1,8 @@
+[package]
+name = "arxkdev/richify"
+description = "A simple library to assist RichText rendering in Roblox."
+version = "0.0.3"
+license = "MIT"
+authors = ["Arxk (https://github.com/arxkdev)"]
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
